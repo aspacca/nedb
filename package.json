@@ -1,12 +1,11 @@
 {
-  "name": "nedb",
+  "name": "@aspacca/nedb",
+  "private": true,
   "version": "1.8.0",
-  "author": {
-    "name": "Louis Chatriot",
-    "email": "louis.chatriot@gmail.com"
-  },
+  "author": "Louis Chatriot <louis.chatriot@gmail.com>",
   "contributors": [
-    "Louis Chatriot"
+    "Louis Chatriot",
+    "Andrea Spacca"
   ],
   "description": "File-based embedded data store for node.js",
   "keywords": [
@@ -14,13 +13,14 @@
     "datastore",
     "embedded"
   ],
-  "homepage": "https://github.com/louischatriot/nedb",
+  "homepage": "https://github.com/aspacca/nedb",
   "repository": {
     "type": "git",
-    "url": "git@github.com:louischatriot/nedb.git"
+    "url": "git+ssh://git@github.com/aspacca/nedb.git"
   },
   "dependencies": {
     "async": "0.2.10",
+    "lockfile": "1.0.3",
     "binary-search-tree": "0.2.5",
     "localforage": "^1.3.0",
     "mkdirp": "~0.5.1",
@@ -35,12 +35,19 @@
     "commander": "1.1.1"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec --timeout 10000"
+    "test": "mocha --reporter spec --timeout 10000"
   },
   "main": "index",
   "browser": {
     "./lib/customUtils.js": "./browser-version/browser-specific/lib/customUtils.js",
     "./lib/storage.js": "./browser-version/browser-specific/lib/storage.js"
   },
-  "license": "SEE LICENSE IN LICENSE"
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/aspacca/nedb/issues"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  }
 }
